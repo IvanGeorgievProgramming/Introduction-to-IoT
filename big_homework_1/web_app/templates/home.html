@@ -1,0 +1,74 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+Home
+{% endblock title %}
+
+{% block content %}
+    <!--Home-->
+
+    <section class="duohealth home" id="home">
+        <div class="home-content">
+            <!-- Write the name of the user in flask-->
+            <h3>Hi <span>Teacher</span>, we are</h3>
+            <h1>Ivan and Sasho!</h1>
+            <h3>And this is our <span class="multiple-text"></span></h3>
+            <a href="#services" class="btn">Get Started</a>
+        </div>
+        <div class="home-img">
+            <img src="static/images/homepage-docker-logo.png" width="500px">
+        </div>
+    </section>
+
+    <!--About-->
+    
+    <section class="duohealth about" id="about">
+        <div class="about-img">
+            <img src="static/images/thermometer_w.png" alt="">
+        </div>
+
+        <div class="about-content">
+            <h2 class="heading"> See the <span>Statistics</span></h2>
+            <p><b>Explore comprehensive temperature insights for each thermometer: </b></p>
+            <br>
+            <p>See the average temperature for each thermometer.</p>
+            <p>See the minimum temperature for each thermometer.</p>
+            <p>See the maximum temperature for each thermometer.</p>
+            <br>
+            <a href="/stats" class="btn">See the stats!</a>
+        </div>
+    </section>
+
+    <!--Services-->
+
+    <section class="duohealth services" id="services">
+        <h2 class="heading">Our <span>Thermometers</span></h2>
+    
+        <div class="services-container">
+            {% for device_id in device_ids %}
+                <div class="services-box">
+                    <i class='bx bxs-thermometer'></i>
+                    <h3>Thermometer <span>{{ loop.index }}</span></h3>
+                    <p>View a graph of the temperature data for {{ device_id }}.</p>
+                    <a href="{{ url_for('graph', thermometer_id=device_id) }}" class="btn">See the graph!</a>
+                </div>
+            {% endfor %}
+        </div>
+    </section>        
+    
+    <!--Footer-->
+
+    <footer class="footer">
+        
+        <div class="footer-text">
+            <p>Provided by Ivan and Sasho!</p>
+        </div>
+
+        <div class="footer-iconTop">
+            <a href="#home">
+                <i class='bx bx-up-arrow-alt' ></i>
+            </a>
+        </div>
+    </footer>
+
+{% endblock %}

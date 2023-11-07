@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature Graph</title>
+    <link rel="stylesheet" href="/static/css/better_style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        h2 {
+            font-size: 2em;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="services" id="services">
+        <header class="header">
+            <a href="#" class="logo">Big Homework 1</a>
+          
+            <i class='bx bx-menu' id="menu-icon"></i>
+          
+            <nav class="navbar">
+                <a href="/home#home">Home</a>
+                <a href="/stats">Stats</a>
+                <a href="/home#services">Thermometers</a>
+            </nav>
+        </header>
+    
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    
+        <h2>Temperature Graph for <span>{{ device_id }}</span></h2>
+        <div style="width: 60%; margin: auto;">
+            <canvas id="temperatureChart"></canvas>
+        </div>
+    
+        <script>
+            const ctx = document.getElementById('temperatureChart').getContext('2d');
+            const temperatureChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: {{ timestamps | tojson }},
+                    datasets: [{
+                        label: '{{ device_id }} Temperatures',
+                        data: {{ values | tojson }},
+                        borderColor: 'rgb(75, 192, 192)',
+                        tension: 0.1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: false
+                        }
+                    }
+                }
+            });
+        </script>
+    </section>
+</body>
+</html>

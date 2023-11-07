@@ -1,0 +1,48 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+Stats
+{% endblock title %}
+
+{% block content %}
+    <!--Services-->
+
+    <section class="duohealth services" id="services">
+        <h2 class="heading">Our <span>Statistics</span></h2>
+    
+        <div class="services-container">
+            {% for device_id, stats in stats_result.items() %}
+                <div class="services-box">
+                    <i class='bx bxs-thermometer'></i>
+                    <h3>Thermometer <span>{{ loop.index }}</span></h3>
+                    <p>Average Temperature: <span>{{ stats.average }}</span></p>
+                    <p>Max Temperature: <span>{{ stats.max }}</span></p>
+                    <p>Min Temperature: <span>{{ stats.min }}</span></p>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}
+
+<!-- templates/stats.html -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thermometer Statistics</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <h1>Thermometer Statistics</h1>
+    <ul>
+        {% for device_id, stats in stats_result.items() %}
+        <li>
+            <strong>{{ device_id }}</strong>:
+            Average Temperature: {{ stats.average }},
+            Max Temperature: {{ stats.max }},
+            Min Temperature: {{ stats.min }}
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html> -->
