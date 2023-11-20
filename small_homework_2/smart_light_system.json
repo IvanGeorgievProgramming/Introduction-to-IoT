@@ -1,0 +1,133 @@
+{
+    "thing_id": "smart_home:smart_light_system",
+    "policy_id": "smart_home:smart_light_policy",
+    "definition": "smart_home:LED_strip_WS2812B:1.0.0",
+    "attributes": {
+        "manufacturer": "OnlyLeds",
+        "installation_date": "2023-11-20",
+        "system_version": "1.2.0"
+    },
+    "features": {
+        "hall_lights": {
+            "properties": {
+                "brightness": 90,
+                "color_correction": "UncorrectedColor",
+                "light_temperature": "ClearBlueSky",
+                "color": {
+                    "type": "HSV",
+                    "value": {"H": 50, "S": 80, "V": 60}
+                }
+            },
+            "desired_properties": {
+                "brightness": 200,
+                "color_correction": "TypicalLEDStrip",
+                "light_temperature": "HighNoonSun",
+                "color": {
+                    "type": "RGB",
+                    "value": {"R": 255, "G": 255, "B": 255}
+                }
+            }
+        },
+        "kitchen_lights": {
+            "properties": {
+                "brightness": 100,
+                "color_correction": "Typical8mmPixel",
+                "light_temperature": "Halogen",
+                "color": {
+                    "type": "RGB",
+                    "value": {"R": 255, "G": 200, "B": 150}
+                }
+            },
+            "desired_properties": {
+                "brightness": 200,
+                "color_correction": "TypicalLEDStrip",
+                "light_temperature": "HighNoonSun",
+                "color": {
+                    "type": "RGB",
+                    "value": {"R": 255, "G": 255, "B": 255}
+                }
+            }
+        },
+        "bedroom_room_lights": {
+            "properties": {
+                "brightness": 45,
+                "color_correction": "TypicalSMD5050",
+                "light_temperature": "Candle",
+                "color": {
+                    "type": "RGB",
+                    "value": {"R": 112, "G": 160, "B": 145}
+                }
+            },
+            "desired_properties": {
+                "brightness": 200,
+                "color_correction": "TypicalLEDStrip",
+                "light_temperature": "HighNoonSun",
+                "color": {
+                    "type": "RGB",
+                    "value": {"R": 255, "G": 255, "B": 255}
+                }
+            }
+        },
+        "living_room_lights": {
+            "properties": {
+                "brightness": 75,
+                "color_correction": "TypicalLEDStrip",
+                "light_temperature": "HighNoonSun",
+                "color": {
+                    "type": "palette",
+                    "value": "sunset"
+                }
+            },
+            "desired_properties": {
+                "brightness": 200,
+                "color_correction": "TypicalLEDStrip",
+                "light_temperature": "HighNoonSun",
+                "color": {
+                    "type": "RGB",
+                    "value": {"R": 255, "G": 255, "B": 255}
+                }
+            }
+        },
+        "dayana_room_lights": {
+            "properties": {
+                "brightness": 30,
+                "color_correction": "TypicalLEDStrip",
+                "light_temperature": "Tungsten40W",
+                "color": {
+                    "type": "palette",
+                    "value": "violet_dreams"
+                }
+            },
+            "desired_properties": {
+                "brightness": 200,
+                "color_correction": "TypicalLEDStrip",
+                "light_temperature": "HighNoonSun",
+                "color": {
+                    "type": "RGB",
+                    "value": {"R": 255, "G": 255, "B": 255}
+                }
+            }
+        },
+        "ivan_room_lights": {
+            "properties": {
+                "brightness": 70,
+                "color_correction": "TypicalLEDStrip",
+                "light_temperature": "DirectSunlight",
+                "color": {
+                  "type": "palette",
+                  "value": "tropical"
+                }
+            },
+            "desired_properties": {
+                "brightness": 200,
+                "color_correction": "TypicalLEDStrip",
+                "light_temperature": "HighNoonSun",
+                "color": {
+                    "type": "RGB",
+                    "value": {"R": 255, "G": 255, "B": 255}
+                }
+            }
+        }
+    }
+}
+  
