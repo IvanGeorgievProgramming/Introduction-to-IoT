@@ -1,0 +1,39 @@
+{
+    "thingId": "bulb-2",
+    "policyId": "bulb-2",
+    "attributes": {
+        "manufacturer": "OnlyLeds",
+        "number": 2
+    },
+    "features": {
+        "colorControl": {
+            "properties": {
+                "color": "pink"
+            },
+            "desiredProperties": {
+                "color": "white"
+            }
+        },
+        "brightnessControl": {
+            "properties": {
+                "brightness": 23
+            },
+            "desiredProperties": {
+                "brightness": 100
+            }
+        },
+        "stateControl": {
+            "properties": {
+                "state": "on"
+            },
+            "desiredProperties": {
+                "state": "off"
+            }
+        },
+        "state": {
+            "properties": {
+                "working": false
+            }
+        }
+    }
+}
